@@ -103,22 +103,12 @@ header {
   background-color: var(--main-color);
   color: #0a0f13;
 }
-.my-image {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 8vh;
-  position: relative; */
-}
+
 .image-clip-text {
-  /* bottom: -100px; */
   top: 0;
 }
 .image-clip {
-  /* width: 85%; */
-  /* max-width: 600px; */
   height: 410px;
-  /* overflow: hidden; */
   border: 5px solid #a4ce1a;
   border-radius: 12px;
   position: relative;
@@ -422,9 +412,7 @@ nav .nav-link {
 .carousel-item > div > div {
   height: 100%;
 }
-button[data-bs-slide="prev"] {
-  /* margin-left: 60px; */
-}
+
 button[data-bs-slide="prev"],
 button[data-bs-slide="next"] {
   position: static;
@@ -441,3 +429,267 @@ button[data-bs-slide="next"]:hover {
   --bs-btn-hover-bg: transparent;
   border-width: 2px;
 }
+/* ============ start our-team  =============*/
+.our-team {
+  background-color: #0b0e13;
+}
+.our-team {
+  padding-block: 120px;
+}
+.our-team .row .inner {
+  position: relative;
+}
+.card-our-team {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.card-our-team::after {
+  content: "";
+  width: auto;
+  height: 100%;
+  background-color: #242424ca;
+  backdrop-filter: grayscale() brightness();
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(0);
+  transition: transform 1s;
+  border-radius: 15px;
+}
+.card-our-team:hover::after {
+  transform: translateY(-100%);
+}
+.cover {
+  position: absolute;
+  background-color: #242424ca;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  transition: height 0.5s;
+  height: 100%;
+  backdrop-filter: grayscale() brightness();
+}
+.our-team .row .inner:hover .cover {
+  height: 0;
+}
+.cards-section {
+  position: absolute;
+  top: 60%;
+  bottom: 0px;
+  padding-left: 30px;
+  width: 85%;
+}
+.cards-section h3 {
+  margin: 0;
+  font-family: "Days One", sans-serif;
+  font-size: 20px;
+}
+.cards-section span {
+  font-size: 14px;
+}
+.inner:hover .cards-section span,
+.inner:hover .special-text p {
+  color: var(--main-color);
+}
+.cards-section p {
+  color: var(--text-color);
+  font-size: 12px;
+  margin: 0;
+}
+.special-text p {
+  writing-mode: vertical-rl;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+/* ============ end our-team section ============ */
+/* ========== strat contact-us  section ==========*/
+.contact-us .main-text,
+.our-team .main-text,
+.what-we-do .main-text {
+  line-height: 1.8;
+  margin-block: 70px;
+}
+.contact-us .main-text h4,
+.our-team .main-text h4,
+.what-we-do .main-text h4 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+.contact-us .main-text h2,
+.our-team .main-text h2,
+.what-we-do .main-text h2 {
+  font-size: 45px;
+  font-weight: 700;
+  font-family: "Days One", sans-serif;
+}
+.contact-us .main-text p,
+.our-team .main-text p {
+  color: var(--text-color);
+  font-size: 18px;
+}
+.contact-us {
+  background-color: var(--siven-color);
+}
+.contact-us .contact-us-left-side .location-dot,
+.contact-us .contact-us-left-side .phone,
+.contact-us .contact-us-left-side .envelope {
+  font-size: 25px;
+  color: var(--fifth-color);
+  flex-shrink: 0;
+}
+.contact-us-left-side h3 {
+  font-weight: 200;
+  font-size: 22px;
+  font-family: "Days One", sans-serif;
+}
+.contact-us-left-side p {
+  color: var(--text-color);
+}
+.contact-us-left-side h3,
+.contact-us-left-side p {
+  margin-left: 15px;
+}
+.contact-us-left {
+  background-color: var(--second-color);
+}
+.Community {
+  background-image: linear-gradient(to right, #c7fd24, #12e072);
+}
+.Community h3,
+.Community p {
+  color: black;
+}
+.Community h3 {
+  font-size: 25px;
+  font-weight: 900;
+}
+.Community ul li {
+  margin-right: 15px;
+}
+.Community ul li i {
+  font-size: 22px;
+}
+.Community ul li span {
+  background-color: #0b0e13;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Community ul li span:hover {
+  cursor: pointer;
+  background-color: var(--six-color);
+}
+.contact-us-right-side {
+  background-color: var(--second-color);
+}
+.contact-us-right-side h2 {
+  font-size: 22px;
+  font-family: "Days One", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.contact-us-right-side .first-second-lable input {
+  width: 90%;
+ padding: 10px 5px;
+ padding-left: 20px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-color);
+}
+.contact-us input:focus ,.contact-us textarea:focus ,select:focus{
+  color: var(--main-color);
+ outline:2px solid var(--main-color);
+}
+select:optional {
+  color: white;
+}
+.contact-us-right-side option {
+  color: white;
+}
+.contact-us-right-side .check-box {
+  width: 15px;
+  height: 15px;
+}
+.checkbox-text {
+  color: var(--text-color);
+  font-size: 14px;
+}
+.contact-us-right-side .form-btn {
+  font-size: 30x;
+  font-weight: 800;
+}
+.contact-us-foot span {
+  font-size: 25px;
+  font-weight: 700;
+}
+.form-btn {
+  position: relative;
+  overflow: hidden;
+}
+.form-btn::after {
+  content: "";
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: all 1s;
+  background-image: linear-gradient(
+    to right,
+    transparent 20%,
+    white,
+    transparent 80%
+  );
+  border-radius: 10px;
+}
+.form-btn:hover:after {
+  left: 100%;
+}
+.form-btn:hover {
+  background-color: var(--main-hover-color);
+}
+/*============= end contact-us ===============  */
+/* ============= start footer ================*/
+footer {
+  color: var(--text-color);
+  background-color: var(--fifth-color);
+}
+footer ul li a{
+  color: var(--text-color) ;
+}
+
+footer h3,
+footer .main-text ul li a i {
+  font-size: 22px;
+}
+footer .main-text h3 {
+  font-family: "Chakra Petch", sans-serif;
+}
+footer h3 {
+  font-weight: 550;
+  font-family: "Days One", sans-serif;
+}
+footer .main-text ul li a i {
+  margin-right: 12px;
+}
+footer .container .row .games-text ul {
+  line-height: 2;
+}
+footer .main-text ul li a i:hover,
+footer .container .row .games-text ul li a:hover ,footer .footer-privacy li:hover a {
+  color: var(--main-hover-color);
+  cursor: pointer;
+}
+
+/*============ end footer ================== */
